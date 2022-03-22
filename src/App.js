@@ -140,6 +140,7 @@ function App() {
       <main id="app-main">
         <section className="app-section">
           <h3>1. Log in with Facebook</h3>
+         
           {facebookUserAccessToken ? (
             <button onClick={logOutOfFB} className="btn action-btn">
               Log out of Facebook
@@ -158,12 +159,16 @@ function App() {
               onChange={(e) => setImageUrl(e.target.value)}
               placeholder="Enter a JPEG image url..."
             />
+            <br/>
+            <br/>
             <textarea
               value={postCaption}
               onChange={(e) => setPostCaption(e.target.value)}
               placeholder="Write a caption..."
               rows="10"
             />
+            <br/>
+            <br/>
             <button
               onClick={shareInstagramPost}
               className="btn action-btn"
@@ -171,7 +176,9 @@ function App() {
             >
               {isSharingPost ? "Sharing..." : "Share"}
             </button>
-            <input type="file" name="myImage" onChange={onImageChange} />
+            <br/>
+            <br/>
+            {/* <input type="file" name="myImage" onChange={onImageChange} /> */}
           </section>
         ) : null}
       </main>
